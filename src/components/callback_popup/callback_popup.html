@@ -1,0 +1,42 @@
+<div class="callback_popup js_callback_popup">
+    <div class="callback_popup__body">
+        <div class="callback_popup__close js_callback_popup_close"></div>
+        <div class="callback_popup__img">
+            <img src="img/callback_popup/bg_img.jpg" alt="">
+        </div>
+        <div class="callback_popup__content_wr js_form_block">
+            <div class="callback_popup__content js_form_content active" data-content="form">
+                <h4 class="callback_popup__title">Закажите обратный звонок</h4>
+                <form action="#" class="main_contacts__form_form js_form">
+                    <div class="main_contacts__form_row">
+                        <div class="main_contacts__form_input_wr">
+                            <span class="main_contacts__form_input_placeholder">Ваше имя*</span>
+                            <input type="text" name="name" class="main_contacts__form_input js_required">
+                            <span class="main_contacts__form_input_error"></span>
+                        </div>
+                        <div class="main_contacts__form_input_wr">
+                            <span class="main_contacts__form_input_placeholder">Телефон*</span>
+                            <input type="tel" name="tel" class="main_contacts__form_input js_required js_tel_mask">
+                            <span class="main_contacts__form_input_error"></span>
+                        </div>
+                        <div class="main_contacts__form_input_wr this--textarea">
+                            <span class="main_contacts__form_input_placeholder">Комментарий</span>
+                            <textarea name="comment" class="main_contacts__form_input"></textarea>
+                        </div>
+                    </div>
+                    <div class="main_contacts__form_agree">
+                        Нажимая кнопку, вы соглашаетесь с <a href="#">Политикой конфиденциальности</a>
+                    </div>
+                    <input type="submit" value="Заказать звонок" class="main_contacts__form_submit btn">
+                </form>
+            </div>
+            <div class="callback_popup__content js_form_content this--thanks" data-content="thanks">
+                <div class="main_contacts__thanks_body">
+                    <h3 class="main_contacts__thanks_title">Спасибо за заявку!</h3>
+                    <div class="main_contacts__thanks_text">Мы скоро Вам перезвоним.</div>
+                    <a href="#" class="main_contacts__thanks_btn btn js_callback_popup_close">ОК</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

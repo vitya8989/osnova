@@ -1,0 +1,148 @@
+.callback_popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 105;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s, visibility 0.25s;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media ($tablet3) {
+    padding: 0;
+  }
+}
+.callback_popup__body {
+  background: #242528;
+  border-radius: 5px;
+  max-width: 1270px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  max-height: 100%;
+
+  @media ($tablet3) {
+    height: 100%;
+    border-radius: 0;
+  }
+}
+.callback_popup__close {
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 25px;
+  width: 50px;
+  height: 60px;
+  background: url('../img/header/burger_bg.png') center/contain no-repeat;
+
+  @media ($tablet3) {
+    top: 20px;
+    right: 10px;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    height: 2px;
+    width: 26px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    left: 12px;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+.callback_popup__img {
+  width: 300px;
+  align-self: stretch;
+  flex: 0 0 auto;
+
+  @media ($desktopSmall) {
+    display: none;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.callback_popup__content_wr {
+  overflow-y: auto;
+  flex: 1 1 auto;
+  max-height: 100%;
+}
+.callback_popup__content {
+  padding: 60px 80px 60px 60px;
+  display: none;
+  min-height: 800px;
+
+  @media ($tablet3) {
+    padding: 40px 15px;
+    min-height: 100%;
+  }
+
+  &.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &.this--thanks {
+    @media ($desktopSmall) {
+      align-items: center;
+    }
+  }
+
+  .main_contacts__thanks_body {
+    width: auto;
+
+    @media ($tablet3) {
+      width: 400px;
+    }
+    @media ($mobileMiddle) {
+      width: 100%;
+    }
+  }
+  .main_contacts__thanks_text {
+    font-size: 24px;
+    line-height: 150%;
+
+    @media ($tablet3) {
+      font-size: 18px;
+      line-height: 140%;
+    }
+  }
+}
+.callback_popup__title {
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 110%;
+  color: #FFFFFF;
+
+
+  @media ($desktopBig) {
+    font-size: 48px;
+  }
+  @media ($tablet3) {
+    font-size: 18px;
+    line-height: 140%;
+  }
+}

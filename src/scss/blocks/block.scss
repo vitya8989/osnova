@@ -1,0 +1,274 @@
+.block {
+  position: relative;
+  overflow: hidden;
+}
+.block__content {
+  display: flex;
+
+  @media ($desktopBig) {
+    display: block;
+  }
+  .block.this--blue.this--black & {
+    background: #242528;
+
+    &::before {
+      @media ($desktopBig) {
+        background: #242528;
+      }
+    }
+    &::after {
+      background: #242528;
+    }
+  }
+  .block.this--blue & {
+    position: relative;
+    background: #0856A0;
+    border-radius: 4px 0 0 4px;
+
+    @media ($desktopBig) {
+      border-radius: 0;
+    }
+    @media ($tablet) {
+      border-radius: 4px 0 0 4px;
+    }
+
+    .block__content_bg_img {
+      position: absolute;
+      width: 780px;
+      height: 549px;
+      background: url('../img/main/main_projects/bg_img.png') center / 100% 100% no-repeat;
+      left: 0;
+      top: 0;
+
+      @media ($desktopBig) {
+        width: 390px;
+        height: 275px;
+      }
+      @media ($tablet) {
+        width: 260px;
+        height: 180px;
+      }
+    }
+
+    &::before {
+      @media ($desktopBig) {
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 100%;
+        background: #0856A0;
+        left: -15px;
+        top: 0;
+        border-radius: 4px 0 0 4px;
+      }
+      @media ($tablet) {
+        display: none;
+      }
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      width: calc((100vw - 1800px) / 2 + 40px);
+      height: 100%;
+      background: #0856A0;
+      left: 100%;
+      top: 0;
+
+      @media (max-width: 1800px) {
+        width: 40px;
+      }
+      @media ($tablet) {
+        width: 15px;
+      }
+    }
+  }
+}
+.block__content_bg_img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 590px;
+  height: 1061px;
+  background: url('../img/main/main_about/bg_img.png') center / 100% 100% no-repeat;
+  @media ($desktopBig) {
+    width: 360px;
+    height: 647px;
+  }
+  @media ($tablet) {
+    width: 240px;
+    height: 432px;
+  }
+  @media ($tablet3) {
+    width: 170px;
+    height: 305px;
+    top: -120px;
+  }
+
+  .this--same_page & {
+    top: 115px;
+
+    @media ($tablet3) {
+      width: 170px;
+      height: 305px;
+      top: 112px;
+    }
+  }
+}
+.block__left {
+  width: 220px;
+  flex: 0 0 auto;
+  position: relative;
+  padding: 100px 0;
+
+  @media ($desktopBig) {
+    width: auto;
+    padding: 100px 0 0 0;
+  }
+
+  @media ($tablet) {
+    padding: 40px 0 0 0;
+  }
+
+  .block.this--blue & {
+    padding-left: 50px;
+
+    @media ($desktopBig) {
+      padding-left: 40px;
+    }
+    @media ($tablet) {
+      padding-left: 15px;
+    }
+  }
+
+  .line:first-child {
+    left: 0;
+  }
+  .line:nth-child(2) {
+    display: none;
+    left: 38.666666%;
+
+    @media ($desktopBig) {
+      display: block;
+    }
+
+    @media ($tablet) {
+      display: none;
+    }
+  }
+  .line:nth-child(3) {
+    display: none;
+    left: 65.333333%;
+
+    @media ($desktopBig) {
+      display: block;
+    }
+
+    @media ($tablet) {
+      display: none;
+    }
+  }
+  .line:nth-child(4) {
+    display: none;
+    right: 0;
+
+    @media ($desktopBig) {
+      display: block;
+    }
+  }
+}
+.block__right {
+  min-width: 0;
+  flex: 1 1 auto;
+  position: relative;
+  padding: 100px 0;
+
+  @media ($desktopBig) {
+    padding: 30px 0 100px 0;
+  }
+
+  @media ($tablet) {
+    padding: 20px 0 40px 0;
+  }
+
+  .block.this--blue & {
+    @media ($tablet) {
+      padding-left: 15px;
+    }
+  }
+  .line:first-child {
+    left: 0;
+  }
+  .line:nth-child(2) {
+    left: 38.666666%;
+
+    @media ($tablet) {
+      display: none;
+    }
+  }
+  .line:nth-child(3) {
+    left: 65.333333%;
+
+    @media ($tablet) {
+      display: none;
+    }
+  }
+  .line:nth-child(4) {
+    right: 0;
+  }
+}
+.block__right_title {
+  display: flex;
+  justify-content: flex-end;
+}
+.block__right_title_text {
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 110%;
+  color: #0856A0;
+
+  @media ($desktopBig) {
+    font-size: 42px;
+  }
+  @media ($tablet) {
+    font-size: 36px;
+  }
+  @media ($tablet3) {
+    font-size: 30px;
+  }
+}
+.width_61 {
+  width: 61.333333%;
+
+  @media ($tablet) {
+    width: 100%;
+  }
+}
+.width_65 {
+  width: 65.333333%;
+
+  @media ($tablet) {
+    width: 100%;
+  }
+}
+.width_38 {
+  width: 38.666666%;
+
+  @media ($tablet) {
+    width: 100%;
+  }
+}
+.width_34 {
+  width: 34.666666%;
+
+  @media ($tablet) {
+    width: 100%;
+  }
+}
+.line {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background: rgba(121, 143, 164, 0.15);
+  z-index: 3;
+}

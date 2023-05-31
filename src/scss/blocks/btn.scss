@@ -1,0 +1,49 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 150%;
+  color: #FFFFFF;
+  background: #0856A0;
+  border-radius: 4px;
+  padding: 22px;
+  transition: background 0.25s!important;
+  cursor: pointer;
+  
+  @media ($tablet3) {
+    padding: 18px;
+    font-size: 16px;
+  }
+
+  &:hover:not(.this--transparent) {
+    @media #{$mouse-device} {
+      background: #1369BA;
+    }
+  }
+  &:active:not(.this--transparent) {
+    background: #095195 !important;
+  }
+  &:focus:not(.this--transparent) {
+    background: #1369BA;
+  }
+
+  &.this--transparent {
+    background: transparent;
+    border: 2px solid #FFFFFF;
+    transition: opacity 0.25s!important;
+
+    &:hover {
+      @media #{$mouse-device} {
+        opacity: 0.7;
+      }
+    }
+    &:active {
+      opacity: 0.4 !important;
+    }
+    &:focus {
+      opacity: 0.7;
+    }
+  }
+}

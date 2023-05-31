@@ -1,0 +1,218 @@
+footer {
+  &.this--main {
+    .block__left,
+    .block__right {
+      padding: 0 0 100px;
+
+      @media ($desktopBig) {
+        padding: 0;
+      }
+    }
+    .block__right {
+      @media ($desktopBig) {
+        padding: 0 0 100px;
+      }
+      @media ($tablet) {
+        padding: 0 0 40px;
+      }
+    }
+  }
+
+
+  .block__left,
+  .block__right {
+    padding: 60px 0 50px;
+
+    @media ($tablet) {
+      .line {
+        display: none;
+      }
+    }
+  }
+  .block__left {
+    @media ($desktopBig) {
+      padding: 0;
+    }
+  }
+  .block__right {
+    @media ($tablet) {
+      padding: 20px 0 40px;
+    }
+  }
+
+
+  .block__content {
+    border-radius: 0 0 0 4px!important;
+
+    @media ($desktopBig) {
+      border-radius: 0!important;
+    }
+    @media ($tablet) {
+      border-radius: 0 0 0 4px!important;
+    }
+
+    &::before {
+      border-radius: 0 0 0 4px!important;
+    }
+  }
+}
+.footer__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-top: -20px;
+
+  @media ($tablet3) {
+    display: block;
+    text-align: center;
+
+    margin-right: 0;
+    margin-top: 0;
+  }
+}
+.footer__menu {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: -30px;
+  margin-bottom: -10px;
+  margin-right: 30px;
+  margin-top: 20px;
+
+  @media ($tablet3) {
+    display: block;
+    text-align: center;
+    margin-right: 0;
+    margin-top: 0;
+  }
+  li {
+    margin-left: 30px;
+    margin-bottom: 10px;
+  }
+}
+.footer__link {
+  font-family: 'Evolventa', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  color: #FFFFFF;
+  transition: color 0.25s;
+
+  .footer.this--color_black & {
+    color: #242528;
+    &:hover {
+      @media #{$mouse-device} {
+        color: #0856A0;
+      }
+    }
+    &:focus {
+      color: #0856A0;
+    }
+    &:active {
+      color: #798FA4 !important;
+    }
+  }
+
+  @media ($tablet3) {
+    font-size: 14px;
+  }
+
+  &:hover {
+    @media #{$mouse-device} {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.4) !important;
+  }
+  &:focus {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+.footer__politic {
+  font-family: 'Evolventa', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  transition: color 0.25s;
+  margin-right: 30px;
+  margin-top: 20px;
+
+  @media ($tablet3) {
+    display: inline-block;
+    margin-right: 0;
+    font-size: 14px;
+  }
+
+  .footer.this--color_black & {
+    color: #242528;
+    &:hover {
+      @media #{$mouse-device} {
+        color: #0856A0;
+        text-decoration: underline;
+      }
+    }
+    &:focus {
+      color: #0856A0;
+      text-decoration: underline;
+    }
+    &:active {
+      color: #798FA4 !important;
+      text-decoration: underline;
+    }
+  }
+
+  &:hover {
+    @media #{$mouse-device} {
+      color: #FFFFFF;
+      text-decoration: underline;
+    }
+  }
+  &:active {
+    color: #FFFFFF;
+    text-decoration: underline;
+  }
+  &:focus {
+    color: #FFFFFF;
+    text-decoration: underline;
+  }
+}
+.footer__develope {
+  display: flex;
+  align-items: center;
+  font-family: 'Evolventa', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  color: rgba(255, 255, 255, 0.7);
+  margin-right: 30px;
+  margin-top: 20px;
+
+  @media ($tablet3) {
+    margin-right: 0;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .footer.this--color_black & {
+    color: #242528;
+  }
+
+  img {
+    margin-left: 10px;
+    width: 110px;
+
+    @media ($tablet3) {
+      width: 115px;
+    }
+  }
+}

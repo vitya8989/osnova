@@ -1,0 +1,41 @@
+.h2_title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: #798FA4;
+
+  .block.this--blue & {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media ($tablet3) {
+    font-size: 15px;
+  }
+}
+.h1_title {
+  font-weight: 500;
+  font-size: 74px;
+  line-height: 110%;
+  color: #0856A0;
+
+  @media ($desktopBig) {
+    font-size: 56px;
+  }
+  @media ($tablet3) {
+    font-size: 26px;
+  }
+}
+.h3_title {
+  font-family: 'Magistral', sans-serif!important;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 110%;
+  color: #0856A0;
+
+  @media ($desktopBig) {
+    font-size: 48px;
+  }
+  @media ($tablet3) {
+    font-size: 30px;
+  }
+}
