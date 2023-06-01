@@ -157,6 +157,13 @@
   font-size: 20px;
   line-height: 160%;
   color: #FFFFFF;
+  border-radius: 0!important;
+  -webkit-appearance: none!important;
+
+  &:-webkit-autofill{
+    -webkit-text-fill-color: #FFFFFF !important;
+  }
+  -webkit-text-fill-color: #FFFFFF !important;
 
   &:hover {
     @media ($desktopSmallMax) {
@@ -230,6 +237,7 @@
   margin-top: 60px;
   width: 100%;
   max-width: 400px;
+  -webkit-appearance: none!important;
 
   @media ($tablet3) {
     margin-top: 20px;

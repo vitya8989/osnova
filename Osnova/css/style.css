@@ -1617,6 +1617,7 @@ footer .block__content::before {
   margin-top: 100px;
   padding-bottom: 110px;
   position: relative;
+  z-index: 3;
 }
 
 .main_reviews__slider_controls {
@@ -1914,6 +1915,13 @@ footer .block__content::before {
   font-size: 20px;
   line-height: 160%;
   color: #FFFFFF;
+  border-radius: 0 !important;
+  -webkit-appearance: none !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
+.main_contacts__form_input:-webkit-autofill {
+  -webkit-text-fill-color: #FFFFFF !important;
 }
 
 .main_contacts__form_input:focus {
@@ -1969,6 +1977,7 @@ footer .block__content::before {
   margin-top: 60px;
   width: 100%;
   max-width: 400px;
+  -webkit-appearance: none !important;
 }
 
 .main_contacts__mail {

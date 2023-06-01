@@ -27,8 +27,27 @@ if (header) {
         document.body.classList.toggle('this--overflow');
     });
 
-}
-;
+
+    if (header.querySelectorAll('a[href^="#"]').length > 0) {
+        header.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                headerNav.classList.remove('open');
+                headerBurger.classList.remove('active');
+                document.body.classList.remove('this--overflow');
+                let href = this.getAttribute('href').substring(1);
+                const scrollTarget = document.getElementById(href);
+                let topOffset = header.offsetHeight;
+                const elementPosition = scrollTarget.getBoundingClientRect().top;
+                const offsetPosition = elementPosition - topOffset;
+                window.scrollBy({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    }
+};
 if (document.querySelector('.main_top__slider')) {
     const offerSlider = new Swiper('.main_top__slider', {
         effect: 'fade',
