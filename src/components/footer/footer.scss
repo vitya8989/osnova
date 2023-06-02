@@ -18,16 +18,18 @@ footer {
     }
   }
 
-
-  .block__left,
-  .block__right {
-    padding: 60px 0 50px;
-
+  &:not(.this--main) {
     @media ($tablet) {
       .line {
         display: none;
       }
     }
+  }
+
+
+  .block__left,
+  .block__right {
+    padding: 60px 0 50px;
   }
   .block__left {
     @media ($desktopBig) {

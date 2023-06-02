@@ -3358,8 +3358,7 @@ footer .block__content::before {
     padding: 0 0 40px;
   }
 
-  footer .block__left .line,
-  footer .block__right .line {
+  footer:not(.this--main) .line {
     display: none;
   }
 
