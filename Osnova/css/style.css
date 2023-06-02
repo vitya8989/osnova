@@ -3268,6 +3268,14 @@ footer .block__content::before {
     padding: 0 15px;
   }
 
+  .block.this--black {
+    background: #242528;
+  }
+
+  .block.this--black .block__content_bg_img {
+    left: -15px !important;
+  }
+
   .block.this--blue .block__content {
     border-radius: 4px 0 0 4px;
   }

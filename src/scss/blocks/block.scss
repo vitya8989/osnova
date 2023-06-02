@@ -1,6 +1,15 @@
 .block {
   position: relative;
   overflow: hidden;
+
+  &.this--black {
+    @media ($tablet) {
+      background: #242528;
+      .block__content_bg_img {
+        left: -15px!important;
+      }
+    }
+  }
 }
 .block__content {
   display: flex;
